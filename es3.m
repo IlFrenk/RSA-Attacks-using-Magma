@@ -1,6 +1,22 @@
-N :=1371369341274601948778278636423406690031517505123926008773053567592011624152780573861293737219;
-e :=14613992044615514362873325722734275801042498633752586509535659216428873147567136300337933519;
+N1 :=1371369341274601948778278636423406690031517505123926008773053567592011624152780573861293737219;
+e1 :=14613992044615514362873325722734275801042498633752586509535659216428873147567136300337933519;
 
+repeat
+  printf "Vuoi l'input interattivo? [si/no]";
+  read s;
+  if s eq "si" then
+    printf "\ninserisci N: ";
+    readi N;
+    printf "\ninserisci e: ";
+    readi e;
+    printf "\n";
+  elif s eq "no" then
+    N := N1;
+    e := e1;
+  else
+    printf "\nscrivi si oppure no.\n";
+  end if;
+until s eq "si" or s eq "no";
 NFact := Factorization(N);
 pExp := NFact[1];
 qExp := NFact[2];
@@ -8,7 +24,7 @@ q := qExp[1];
 p := pExp[1];
 FiN := (p-1)*(q-1);
 d := Modinv(e, FiN);
-printf "p = ";
+printf "\np = ";
 p;
 printf "q = ";
 q;
@@ -31,11 +47,3 @@ PrintFile("C:/Users/Frenk/Desktop/MAGISTRALE/Crittografia e Applicazioni/CryptoW
 PrintFile("C:/Users/Frenk/Desktop/MAGISTRALE/Crittografia e Applicazioni/CryptoWars/es3.txt", "q = " cat IntegerToString(q));
 PrintFile("C:/Users/Frenk/Desktop/MAGISTRALE/Crittografia e Applicazioni/CryptoWars/es3.txt", "d = " cat IntegerToString(d));
 UnsetOutputFile();
-
-
-/* Factorization(N);
-FiN := N-1;
-a := 19;
-if a ne FiN then
-  a;
-end if; */
