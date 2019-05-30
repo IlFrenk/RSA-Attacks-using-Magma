@@ -14,3 +14,7 @@ P := E![xP, yP];
 Q := E![xQ, yQ];
 Log := Log(P,Q);
 Log;
+
+SetOutputFile("C:/Users/Frenk/Desktop/MAGISTRALE/Crittografia e Applicazioni/CryptoWars/es0.2.txt": Overwrite := true);
+PrintFile("C:/Users/Frenk/Desktop/MAGISTRALE/Crittografia e Applicazioni/CryptoWars/es0.2.txt", "Log(P,Q) = " cat IntegerToString(Log));
+UnsetOutputFile();
