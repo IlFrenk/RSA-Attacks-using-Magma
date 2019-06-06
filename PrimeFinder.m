@@ -14,7 +14,7 @@ for i:=10^60 to B do
   end if;
 end for;
 
-q:=N/p;
+q:=N div p;
 if IsPrime(q) then
   printf "sì";
 end if;

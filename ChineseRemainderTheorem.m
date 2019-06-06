@@ -236,7 +236,7 @@ end for;
 x:=0;
 for i:=1 to 101 do
   printf "sono al ciclo finale %o\n", i;
-  x:=x+S1[i]*ni[i]*yi[i];
+  x:=x+S1[i]*ni[i]*yi[i] mod N;
 end for;
 
 finalSeq:="";
@@ -248,6 +248,12 @@ while IsDefined(x2,i) do
   else
     finalSeq:=finalSeq cat ASCII[x2[i]];
   end if;
+  i:=i+1;
+end while;
+
+//while fai radice e controlla se è intero (101) e trovi m
+while not IsPower(x, i) do
+  //root i-esima di x
   i:=i+1;
 end while;
 
